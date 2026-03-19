@@ -1,4 +1,4 @@
- #A-Banner-graber
+# A-Banner-graber
 
 # A very very bad banner grabber... but it works (sometimes)!
 
