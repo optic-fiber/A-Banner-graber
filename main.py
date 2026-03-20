@@ -1,9 +1,9 @@
 #!/usr/bin/python
 
 import socket
+from termcolor import colored
 
 s = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
-
 
 print("#"*30)
 print("     Simple port scanner     ")
@@ -12,10 +12,11 @@ print("\n")
 
 def main():
     def portscanner():
+        s = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
         if s.connect_ex((host,port)):
             print(f"Port {port} is closed!")
         else:
-            print(f"Port {port} is open!")
+            print(colored(f"Port {port} is open!", 'red'))
             try:
                 s = socket.socket()
                 s.connect((host, int(port)))
@@ -44,3 +45,4 @@ def main():
         main()
 
 main()
+
