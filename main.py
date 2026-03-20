@@ -16,7 +16,7 @@ def main():
         if s.connect_ex((host,port)):
             print(f"Port {port} is closed!")
         else:
-            print(colored(f"Port {port} is open!", 'red'))
+            print(colored(f"Port {port} is open!", 'green'))
             try:
                 s = socket.socket()
                 s.connect((host, int(port)))
