@@ -12,7 +12,6 @@ print("\n")
 
 def main():
     def portscanner():
-        s = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
         if s.connect_ex((host,port)):
             print(f"Port {port} is closed!")
         else:
