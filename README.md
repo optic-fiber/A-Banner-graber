@@ -1,6 +1,4 @@
-# A-Banner-graber
-
-# A very very bad banner grabber... but it works (sometimes)!
+# A-Banner-graber/port scanner
 
 ## What it does
 
