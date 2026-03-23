@@ -8,7 +8,7 @@ from termcolor import colored
 def connscan(tgtHost, tgtPort):
     try:
         sock = socket(AF_INET, SOCK_STREAM)
-        sock.settimeout(0.1)
+        sock.settimeout(0.01)
         sock.connect((tgtHost, tgtPort))
         print(colored(f"{tgtPort}/tcp is open!", 'green'))
         try:
