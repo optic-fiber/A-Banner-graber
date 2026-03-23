@@ -15,6 +15,7 @@
 
 - Proper banner grabbing for more services
 - Better error handling
+- Sadly i dont have any time today
 
 # The addmain.py
 
