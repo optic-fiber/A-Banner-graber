@@ -6,40 +6,44 @@ from threading import *
 from termcolor import colored
 
 def connscan(tgtHost, tgtPort):
+    sock = None
     try:
         sock = socket(AF_INET, SOCK_STREAM)
-        sock.settimeout(0.01)
+        sock.settimeout(0.1)
         sock.connect((tgtHost, tgtPort))
         print(colored(f"{tgtPort}/tcp is open!", 'green'))
         try:
-            s = socket()
+            s = socket(AF_INET, SOCK_STREAM)
+            s.settimeout(0.5)
             s.connect((tgtHost, tgtPort))
-            data = s.recv(1048576)
-            print(f"Info for {tgtPort}, {data}")
+            data = s.recv(1024)
+            if data:
+                print(f" Banner: {data.decode(errors='ignore').strip()}")
             s.close()
         except:
             print("connection refused")
     except:
-        print(colored(f"{tgtPort}/tcp is closed", 'red'))
+	pass
     finally:
-        sock.close()
+	if sock:
+            sock.close()
 
 def portscanner(tgtHost, tgtPorts):
     try:
         tgtIP = gethostbyname(tgtHost)
     except:
-        print(f"Unknown host {tgtHost}")
+	print(f"Unknown host {tgtHost}")
         return
 
     try:
         tgtName = gethostbyaddr(tgtIP)[0]
         print(f"[+] Scan results for {tgtName}")
     except:
-        print(f"Scan results for {tgtIP}")
-
+	print(f"Scan results for {tgtIP}")
     for port in tgtPorts:
         t = Thread(target=connscan, args=(tgtHost, int(port)))
         t.start()
+    exit()
 
 def main():
     help = optparse.OptionParser("Usage: -H <Target Host> -p <Target Port>")
@@ -49,11 +53,16 @@ def main():
     (options, args) = help.parse_args()
 
     tgtHost = options.tgtHost
-    tgtPorts = str(options.tgtPort).split(',')
 
-    if (tgtHost is None) or (tgtPorts[0] is None):
+    if options.tgtPort is None:
+        print("Scanning all ports...")
+        tgtPorts = range(1, 65536)
+    else:
+	tgtPorts = [int(p) for p in options.tgtPort.split(',')]
+
+    if (tgtHost is None):
         print(help.usage)
-        exit(0)
+        exit()
 
     portscanner(tgtHost, tgtPorts)
 
