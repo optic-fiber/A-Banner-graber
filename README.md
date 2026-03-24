@@ -18,6 +18,8 @@
 - Sadly i dont have any time today
 
 # The addmain.py
+- Adds a new function so with not giving -p all 65536 ports get scanned.
+- And the changes added better error handeling.
 
 ## A much better scanner!
 - Handles many errors (still too lazy to add a keyboard interrupt :))
