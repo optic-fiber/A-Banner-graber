@@ -23,7 +23,7 @@ def connscan(tgtHost, tgtPort, tgtBanner):
                 s.close()
 
             except:
-				pass
+                pass
 
     except:
 		pass
