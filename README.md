@@ -1,26 +1,73 @@
-# A Banner Grabber / Port Scanner
+# 🔍 Banner Grabber & Port Scanner
 
-## What it does
+Ein schneller, minimalistischer Portscanner mit optionalem Banner‑Grabbing.
+Ideal, um offene Ports zu identifizieren und erste Fingerprints von Diensten zu sammeln.
 
-- Reads banners from open ports (e.g., SSH)
-- Has a basic scanning function
-- Can distinguish between open and closed ports
+## 🚀 Features
 
-## What it struggles with
+Erkennt offene TCP‑Ports
 
-- Ports that expect the client to speak first
+Optionales Banner‑Grabbing (-b)
 
-## Coming tomorrow (hopefully!)
+Unterstützt flexible Port‑Angaben:
 
-- Proper banner grabbing for more services
-- Better error handling
+    Einzelne Ports → -p 22
 
-# The addmain.py
-- Adds a new function so with not giving -p all 65536 ports get scanned with giving a -p you can set ports and with a "," you can scan multipla ports at once.
-- And the changes added better error handeling.
-- You can now also add a -b to get banners with out it no banners will be not be colected
+    Mehrere Ports → -p 22,80,443
 
-## CVE
-Later I will add automatic detection of vulnerable versions!
+Automatischer Full‑Scan (1–65535), wenn -p nicht angegeben wird
+
+Sauberes Fehler‑Handling
+
+Strg+C bricht den Scan sauber ab
+
+## 📦 Installation
+
+    git clone https://github.com/<dein-user>/banner_graber.git
+    cd banner_graber
+    python3 addmain.py -H <target>
+
+# 🧪 Usage Examples
+## 🔎 Alle Ports scannen
+bash
+
+python3 addmain.py -H 192.168.1.10
+
+## 🎯 Bestimmte Ports scannen
+bash
+
+python3 addmain.py -H 192.168.1.10 -p 22,80,443
+
+## 🏷️ Banner‑Grabbing aktivieren
+bash
+
+python3 addmain.py -H 192.168.1.10 -b
+
+## ⚠️ Einschränkungen
+
+Manche Dienste senden kein Banner, bevor der Client spricht (z. B. HTTP ohne Request)
+
+Banner‑Grabbing ist aktuell generisch, nicht service‑spezifisch
+
+## 🛠️ Roadmap
+
+Erweiterte Banner‑Erkennung (HTTP, FTP, SMTP, etc.)
+
+Service‑Fingerprinting
+
+Fortschrittsanzeige
+
+Thread‑Pool für bessere Performance
+
+UDP‑Scan
+
+Ausgabe im Nmap‑Stil
+
+Automatische CVE‑Erkennung basierend auf Banner‑Versionen
+
+## 🔒 CVE‑Support (in Arbeit)
+
+Geplant ist eine Funktion, die erkannte Banner automatisch mit bekannten CVE‑Datenbanken abgleicht, um potenziell verwundbare Versionen zu identifizieren.
+
 
     
