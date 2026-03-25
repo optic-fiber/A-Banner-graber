@@ -26,7 +26,7 @@ def connscan(tgtHost, tgtPort, tgtBanner):
                 pass
 
     except:
-		pass
+        pass
     finally:
 		if sock:
 			sock.close()
