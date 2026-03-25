@@ -24,7 +24,7 @@ Strg+C bricht den Scan sauber ab
 ## 📦 Installation
 
     git clone https://github.com/optic-fiber/A-Banner-graber.git
-    cd banner_graber
+    cd A-Banner-graber
     python3 addmain.py -H <target>
 
 # 🧪 Usage Examples
