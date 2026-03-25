@@ -23,13 +23,13 @@ def connscan(tgtHost, tgtPort, tgtBanner):
                 s.close()
 
             except:
-                pass
+				pass
 
     except:
 		pass
     finally:
 		if sock:
-            sock.close()
+			sock.close()
 
 def portscanner(tgtHost, tgtPorts, tgtBanner):
     try:
