@@ -23,7 +23,7 @@ Strg+C bricht den Scan sauber ab
 
 ## 📦 Installation
 
-    git clone https://github.com/<dein-user>/banner_graber.git
+    git clone https://github.com/opti-fiber/banner_graber.git
     cd banner_graber
     python3 addmain.py -H <target>
 
