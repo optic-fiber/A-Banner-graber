@@ -1,4 +1,3 @@
-  GNU nano 8.5                                                                                                     addmain.py                                                                                                                
 #!/usr/bin/python
 
 from socket import *
