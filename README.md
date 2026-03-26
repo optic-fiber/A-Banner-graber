@@ -29,19 +29,16 @@ Strg+C bricht den Scan sauber ab
 
 # 🧪 Usage Examples
 ## 🔎 Alle Ports scannen
-bash
 
-python3 addmain.py -H 192.168.1.10
+    python3 addmain.py -H 192.168.1.10
 
 ## 🎯 Bestimmte Ports scannen
-bash
 
-python3 addmain.py -H 192.168.1.10 -p 22,80,443
+    python3 addmain.py -H 192.168.1.10 -p 22,80,443
 
 ## 🏷️ Banner‑Grabbing aktivieren
-bash
 
-python3 addmain.py -H 192.168.1.10 -b
+    python3 addmain.py -H 192.168.1.10 -b
 
 ## ⚠️ Einschränkungen
 
