@@ -62,6 +62,8 @@ Ausgabe im Nmap‑Stil
 
 Automatische CVE‑Erkennung basierend auf Banner‑Versionen
 
+No time today:(
+
 ## 🔒 CVE‑Support (in Arbeit)
 
 Geplant ist eine Funktion, die erkannte Banner automatisch mit bekannten CVE‑Datenbanken abgleicht, um potenziell verwundbare Versionen zu identifizieren.
