@@ -64,6 +64,8 @@ Automatische CVE‑Erkennung basierend auf Banner‑Versionen
 
 No time today:(
 
+Iam gonne look what i can do today propebly http...
+
 ## 🔒 CVE‑Support (in Arbeit)
 
 Geplant ist eine Funktion, die erkannte Banner automatisch mit bekannten CVE‑Datenbanken abgleicht, um potenziell verwundbare Versionen zu identifizieren.
