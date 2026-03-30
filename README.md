@@ -62,7 +62,7 @@ Ausgabe im Nmap‑Stil
 
 Automatische CVE‑Erkennung basierend auf Banner‑Versionen
 
-No time today:(
+No time today:(...
 
 Iam gonne look what i can do today propebly http...
 
