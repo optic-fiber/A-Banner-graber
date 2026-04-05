@@ -46,6 +46,8 @@ Manche Dienste senden kein Banner, bevor der Client spricht (z. B. HTTP ohne R
 
 Banner‑Grabbing ist aktuell generisch, nicht service‑spezifisch
 
+There is still one bug where if you set the timeout to 0.01s which is ok to check wether the port is open then banner funktion is not displaying the bannet right behind the port
+
 ## 🛠️ Roadmap
 
 Erweiterte Banner‑Erkennung (HTTP, FTP, SMTP, etc.)
